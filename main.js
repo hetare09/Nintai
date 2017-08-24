@@ -70,6 +70,8 @@ function cancel(){
 			confirm: {
 				text: 'はい',
 				action: function(){
+					isFinished = true;
+					
 					var p = calcProgress(t);
 					var str = p.toPrecision(1000);
 					var digit = calcDigit(str);
@@ -83,7 +85,6 @@ function cancel(){
 						boxWidth: '300px',
 						useBootstrap: false,
 					});
-				isFinished = true;
 				}
 			},
 			cancel: {
