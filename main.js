@@ -2,6 +2,7 @@ var t = new BigNumber(0)
 var A = new BigNumber(0.992354)	// 1分で90
 const NINETY_NINE = new BigNumber(0.99)
 var isPause = false;
+var isFinished = false;
 
 function calcProgress(time){
 	return new BigNumber(1).minus(A.pow(time))
@@ -43,7 +44,7 @@ $(function() {
 			to: {color: '#ED6A5A'}
 		});
 	setInterval(function() {
-		if(isPause)
+		if(isPause || isFinished)
 			return;
 		t = t.plus(1);
 		p = calcProgress(t);
@@ -82,7 +83,7 @@ function cancel(){
 						boxWidth: '300px',
 						useBootstrap: false,
 					});
-
+				isFinished = true;
 				}
 			},
 			cancel: {
