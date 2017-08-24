@@ -1,0 +1,33 @@
+
+#game {
+	position: absolute;
+	left: 20%;
+	top: 10%;
+	width: 60%;
+	height: 80%;
+	border: 1px solid;
+}
+#container {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	width: 90%;
+	height: 20px;
+}
+.square_btn {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: white;
+    background: #ff6868;
+    transition: .4s;
+    font-weight: bold;
+}
+
+.square_btn:hover {
+    background: #d62020;
+    color: white;
+}
